@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from core.models import User, UserProfile
+from core.models import User, UserProfile, Message, Class
 
 
 class UserProfileSerializer(serializers.ModelSerializer):
@@ -45,3 +45,17 @@ class UserSerializer(serializers.ModelSerializer):
         profile.save()
 
         return instance
+
+
+class MessageSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Message
+        fields = '__all__'
+
+
+class ClassSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = Class
+        fields = '__all__'

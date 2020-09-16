@@ -1,0 +1,77 @@
+/* Footer */
+footer {
+  width: 100%;
+  background: #f2f2f5;
+  font-weight: 100;
+  display: grid;
+  grid-template-columns: 0.5fr 9fr 0.5fr;
+  grid-template-areas:
+    ". blended ."
+    ". company .";
+}
+
+footer div {
+  font-size: 1.6rem;
+  font-weight: 100;
+}
+
+footer p {
+  margin-bottom: 1rem;
+  font-size: var(--text-sm);
+}
+
+footer .blended {
+  grid-area: blended;
+  padding: 5rem 0 3rem 0;
+}
+
+footer .company {
+  grid-area: company;
+  padding: 0 0 5rem 0;
+}
+
+footer .blended p:nth-child(1) {
+  font-weight: 400;
+  color: var(--dark-tone);
+  font-size: var(--text-md);
+}
+
+footer .blended button {
+  margin-top: 1rem;
+  padding: 1.5rem 2rem;
+  color: var(--main-blue);
+  font-size: var(--text-tiny);
+  border: 1px solid var(--main-blue);
+  background: transparent;
+  cursor: pointer;
+}
+
+footer .blended button:focus {
+  outline: none;
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  footer {
+    grid-template-columns: 1.5fr 7fr 1.5fr;
+    grid-template-areas:
+      ". blended ."
+      ". company .";
+  }
+
+  footer .blended button {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  footer {
+    grid-template-columns: 2fr 3fr 3fr 2fr;
+    grid-template-areas: ". blended company .";
+  }
+
+  footer .blended,
+  footer .company {
+    margin: 1rem;
+    padding: 5rem 0 10rem 0;
+  }
+}

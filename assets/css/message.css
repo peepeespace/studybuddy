@@ -1,0 +1,117 @@
+section.message {
+  grid-area: message;
+  background: rgb(91, 99, 111);
+  background: linear-gradient(
+    180deg,
+    rgba(91, 99, 111, 1) 0%,
+    rgba(26, 31, 38, 1) 100%
+  );
+}
+
+section.message .container {
+  width: 100%;
+  padding: 6rem 5% 7rem 5%;
+}
+
+section.message .line {
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+section.message .line .area {
+  width: 5rem;
+  height: 0.5rem;
+  background: var(--light-green);
+}
+
+section.message .title {
+  width: 100%;
+  color: var(--shade);
+  margin-bottom: var(--main-spacing);
+}
+
+section.message .options {
+  width: 100%;
+  margin-bottom: var(--main-spacing);
+}
+
+section.message .options p {
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: var(--shade);
+}
+
+section.message #message-form {
+  width: 100%;
+}
+
+section.message .form-row {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+section.message label {
+  color: var(--shade);
+  font-size: var(--text-md);
+  font-weight: 100;
+  font-family: var(--source-sans);
+}
+
+section.message #name-input,
+section.message #phone-input,
+section.message #email-input {
+  margin: 1rem 0;
+  width: 100%;
+  height: 3rem;
+  font-size: var(--text-md);
+  font-weight: 300;
+  color: var(--shade);
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid var(--shade);
+}
+
+section.message textarea {
+  padding: 0.5rem;
+  margin: 1rem 0;
+  width: 100%;
+  font-size: var(--text-md);
+  font-family: var(--noto-sans);
+  color: var(--shade);
+  background: transparent;
+  border: 1px solid var(--shade);
+}
+
+section.message textarea:focus {
+  outline: none;
+}
+
+section.message input[type="submit"] {
+  width: 100%;
+  height: 5rem;
+  background: var(--light-green);
+  color: var(--dark-tone);
+  font-size: var(--text-md);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  section.message .container {
+    padding: 6rem 15% 7rem 15%;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  section.message .container {
+    padding: 6rem 20% 7rem 20%;
+  }
+
+  section.message .container .title {
+    font-size: 3.5rem;
+  }
+}

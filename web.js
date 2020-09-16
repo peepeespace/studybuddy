@@ -1,11 +1,11 @@
 /*
-Learn platform frontend server
+Studybuddy platform frontend server
 */
 const express = require("express");
 const path = require("path");
 var cors = require("cors");
 
-const PORT = 8888;
+const PORT = 8889;
 const HOST = "0.0.0.0";
 
 const app = express(); // 앱 시작
@@ -20,5 +20,13 @@ app.listen(PORT, HOST);
 console.log(`서버가 http://${HOST}:${PORT} 에서 작동하고 있습니다.`);
 
 app.get("/", (req, res) => {
-  res.render("main.html");
+  res.render("index.html");
+});
+
+app.get("/english", (req, res) => {
+  res.render("english.html");
+});
+
+app.get("/coding", (req, res) => {
+  res.render("coding.html");
 });

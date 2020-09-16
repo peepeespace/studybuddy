@@ -1,0 +1,184 @@
+header {
+  height: 10rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+}
+
+header.white {
+  background: white;
+}
+
+header.transparent {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  background: rgb(9, 132, 227);
+  background: linear-gradient(
+    30deg,
+    rgba(9, 132, 227, 0.6) 3%,
+    rgba(108, 92, 231, 0.6) 98%
+  );
+  z-index: 1;
+}
+
+header.transparent .nav-logo {
+  color: white;
+}
+
+header.transparent .nav-menu {
+  background: rgb(9, 132, 227);
+  background: linear-gradient(
+    30deg,
+    rgba(9, 132, 227, 0.8) 3%,
+    rgba(108, 92, 231, 0.8) 98%
+  );
+  color: white;
+}
+
+header.transparent .nav-menu a:hover {
+  background: rgb(9, 132, 227);
+  background: linear-gradient(
+    30deg,
+    rgba(9, 132, 227, 0.9) 3%,
+    rgba(108, 92, 231, 0.9) 98%
+  );
+}
+
+header.transparent .nav-menu-btn {
+  color: white;
+}
+
+header .nav-logo {
+  width: 100%;
+  color: var(--main-blue);
+  font-family: var(--source-sans);
+  font-weight: 900;
+  font-size: 3.5rem;
+  margin-left: 2rem;
+}
+
+header .nav-menu {
+  width: 100%;
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  top: 10rem;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  z-index: 1;
+}
+
+header .nav-menu a {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.7rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+header .nav-menu a:hover {
+  background: var(--shade);
+}
+
+header .nav-menu-btn {
+  position: absolute;
+  display: block;
+  right: 2rem;
+  font-size: 3.5rem;
+}
+
+@media only screen and (max-width: 400px) {
+  header {
+    height: 7rem;
+  }
+
+  header .nav-logo {
+    font-size: 2rem;
+  }
+
+  header .nav-menu {
+    top: 7rem;
+  }
+
+  header .nav-menu a {
+    font-size: 1.5rem;
+  }
+
+  header .nav-menu-btn {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  header {
+    height: 8.5rem;
+  }
+
+  header .nav-logo {
+    font-size: 3rem;
+  }
+
+  header .nav-menu {
+    top: 8.5rem;
+  }
+
+  header .nav-menu-btn {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  header .nav-logo {
+    margin-left: 3rem;
+  }
+
+  header .nav-menu {
+    margin-right: 2rem;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    top: 0;
+    border: none;
+  }
+
+  header.transparent .nav-menu {
+    background: transparent;
+    color: white;
+  }
+
+  header .nav-menu a {
+    width: 10rem;
+    padding: 0;
+    margin-left: 1rem;
+    background: white;
+  }
+
+  header.transparent .nav-menu a {
+    background: transparent;
+  }
+
+  header .nav-menu a:hover {
+    color: var(--text-shade);
+    background: white;
+  }
+
+  header.transparent .nav-menu a:hover {
+    color: var(--text-shade);
+    background: transparent;
+  }
+
+  header .nav-menu-btn {
+    display: none;
+  }
+}

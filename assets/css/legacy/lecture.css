@@ -1,0 +1,446 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+}
+
+.main .banner {
+  position: relative;
+  background: rgb(52, 52, 52);
+  background: linear-gradient(
+    356deg,
+    rgba(52, 52, 52, 1) 3%,
+    rgba(217, 217, 217, 1) 98%
+  );
+  z-index: -3;
+}
+
+.main .banner .aside {
+  font-size: 1.5rem;
+  font-weight: 100;
+  position: absolute;
+  top: 8rem;
+  left: -8rem;
+  width: 20rem;
+  height: 4rem;
+  background: rgba(0, 0, 0, 0.1);
+  color: white;
+  border-radius: 0 0 0 15px;
+  text-transform: uppercase;
+  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .banner .name {
+  position: absolute;
+  top: 6.5rem;
+  left: 6.5rem;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 100;
+}
+
+.main .banner .name::before {
+  content: "";
+  width: 3rem;
+  height: 3rem;
+  position: absolute;
+  top: -4rem;
+  border: 0.5px solid white;
+  border-radius: 0 0 0 5px;
+}
+
+.main .banner .name::after {
+  content: "";
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: -4rem;
+  border: 0.5px solid white;
+}
+
+.main .banner .line {
+  position: absolute;
+  top: 35rem;
+  left: 0;
+  width: 30%;
+  height: 0.5px;
+  background: rgba(255, 255, 255, 0.5);
+  z-index: -5;
+}
+
+.main .banner .line::after {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  background: rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: -0.35rem;
+  right: -1.35rem;
+}
+
+.main .banner .line p {
+  position: absolute;
+  right: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 5rem;
+  font-family: NanumPenScript, sans-serif;
+}
+
+.main .banner .img {
+  /* margin-top: 4rem; */
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  background: url("../img/anne-full_half.png");
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* filter: grayscale(100%); */
+}
+
+.main .banner .text-bubble {
+  display: none;
+}
+
+.main .banner .signature {
+  font-family: NanumPenScript, sans-serif;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  font-size: 2rem;
+  font-weight: 900;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+}
+
+.main .banner .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  padding: 3rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.main .banner h1 {
+  font-size: 6rem;
+  font-weight: 900;
+  font-family: Montserrat, sans-serif;
+  color: white;
+  /* -webkit-filter: drop-shadow(1px 1px var(--main-blue))
+    drop-shadow(1.25px 1.25px var(--main-blue))
+    drop-shadow(1.5px 1.5px var(--main-blue))
+    drop-shadow(1.75px 1.75px var(--main-blue))
+    drop-shadow(2px 2px var(--main-blue))
+    drop-shadow(2.25px 2.25px var(--main-blue));
+  filter: drop-shadow(1px 1px var(--main-blue))
+    drop-shadow(1.25px 1.25px var(--main-blue))
+    drop-shadow(1.5px 1.5px var(--main-blue))
+    drop-shadow(1.75px 1.75px var(--main-blue))
+    drop-shadow(2px 2px var(--main-blue))
+    drop-shadow(2.25px 2.25px var(--main-blue)); */
+}
+
+.main .banner h1:nth-child(1) span {
+  color: var(--main-blue);
+}
+
+.main .banner h1:nth-child(2) span {
+  color: var(--main-yellow);
+}
+
+.main .banner h1:nth-child(3) span {
+  color: var(--main-purple);
+}
+
+.greeting-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.greeting {
+  margin: 10rem 0 7.5rem 0;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.greeting p span {
+  border: 1px solid var(--shade);
+  background: white;
+  padding: 1rem;
+  border-radius: 15px 0 15px 15px;
+  box-shadow: 3px 3px 6px var(--shade);
+  cursor: pointer;
+}
+
+.greeting p span {
+}
+
+.greeting p:not(:last-of-type) {
+  margin-bottom: 4rem;
+}
+
+.lectures {
+  font-family: "Source Sans Pro", sans-serif;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0 4rem 0;
+}
+
+.lectures-intro {
+  width: 60%;
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 100;
+  padding: 2.5rem 0;
+}
+
+.lectures-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.lecture {
+  display: flex;
+  width: 60%;
+  margin-bottom: 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-shadow: 3px 3px 10px var(--shade);
+  transition: all 0.3s ease-out;
+}
+
+.lecture:hover {
+  box-shadow: 3px 3px 10px var(--shade), -3px -3px 10px var(--shade);
+}
+
+.lecture .tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+}
+
+.lecture .tags .tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 900;
+  border-radius: 4px;
+  color: white;
+  background: #ff7675;
+  cursor: pointer;
+}
+
+.lecture .info {
+  width: 100%;
+  padding: 2rem;
+  position: relative;
+}
+
+.lecture .info .title {
+  font-size: 3rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.lecture .info .subtitle {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 0.5rem;
+  color: #a3a3a3;
+}
+
+.lecture .info .description {
+  font-size: 2rem;
+  font-weight: 100;
+  color: #696969;
+}
+
+.lecture .lecture-footer {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.lecture .info .schedule {
+  /* position: absolute;
+  bottom: 1rem;
+  right: 1rem; */
+  width: 15rem;
+  font-size: 1.5rem;
+  /* font-weight: 900; */
+  background: var(--dark);
+  color: white;
+  padding: 0.7rem 1rem;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.more-info-section {
+  width: 100%;
+  height: 6rem;
+  background: rgb(9, 132, 227);
+  background: linear-gradient(
+    30deg,
+    rgba(9, 132, 227, 0.8) 3%,
+    rgba(108, 92, 231, 0.8) 98%
+  );
+  font-weight: 400;
+  font-size: 2rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 400px) {
+  .main .banner .aside {
+    display: none;
+  }
+
+  .main .banner .name {
+    display: none;
+  }
+
+  .main .banner .line {
+    display: none;
+  }
+
+  .main .banner .text {
+    transform: translate(-50%, 0%);
+  }
+
+  .main .banner .signature {
+    transform: translate(-50%, 0%);
+    background: white;
+  }
+
+  .main .banner h1 {
+    font-size: 3.5rem;
+  }
+
+  .greeting {
+    width: 90%;
+  }
+
+  .lectures-intro {
+    width: 90%;
+  }
+
+  .lecture {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .main .banner h1 {
+    font-size: 4rem;
+  }
+
+  .main .banner .line {
+    width: 25%;
+  }
+
+  .greeting {
+    width: 80%;
+  }
+
+  .lectures-intro {
+    width: 80%;
+  }
+
+  .lecture {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  /* .main .banner .text-bubble {
+    display: block;
+    position: absolute;
+    top: 10rem;
+    left: 10rem;
+  }
+
+  .text-bubble .bubble {
+    background: white;
+    font-weight: 100;
+    font-size: 1.8rem;
+    padding: 1.5rem;
+    margin: 1rem;
+    border-radius: 15px 0 15px 15px;
+  } */
+
+  .main .banner .text {
+    background: rgba(0, 0, 0, 1);
+    left: 60%;
+  }
+
+  .main .banner .signature {
+    font-size: 2.5rem;
+    left: 60%;
+    transform: translate(0%, -15%);
+    background: white;
+  }
+
+  .greeting {
+    width: 60%;
+    margin: 10rem 0 4rem 0;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .main .banner {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main .banner .img {
+    width: 50%;
+    background: url("../img/anne-full_half.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .main .banner .img {
+    width: 50%;
+    background: url("../img/anne-full_half.png");
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

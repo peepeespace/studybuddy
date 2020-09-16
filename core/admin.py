@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.utils.translation import ugettext_lazy as _
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 
-from core.models import User, UserProfile
+from core.models import User, UserProfile, Message, Class
 
 
 class UserProfileInline(admin.StackedInline):
@@ -29,3 +29,6 @@ class UserAdmin(BaseUserAdmin):
     search_fields = ('email', 'first_name', 'last_name')
     ordering = ('email',)
     inlines = (UserProfileInline, )
+
+admin.site.register(Message)
+admin.site.register(Class)

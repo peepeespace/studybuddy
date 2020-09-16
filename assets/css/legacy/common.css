@@ -1,0 +1,41 @@
+:root {
+  --noto-sans: "Noto Sans KR", sans-serif;
+  --source-sans: "Source Sans Pro", sans-serif;
+
+  --border: #ededed;
+  --shade: #f0f0f0;
+  --text-shade: #b8b8b8;
+  --dark: #363636;
+
+  --main-yellow: #d59d2e;
+  --main-blue: #0984e3;
+  --main-purple: #6c5ce7;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-BlackItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "NanumPenScript";
+  src: url("../fonts/Nanum_Pen_Script/NanumPenScript-Regular.ttf")
+    format("truetype");
+}
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: var(--noto-sans);
+  color: var(--dark);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+}

@@ -1,0 +1,70 @@
+/* Header */
+header {
+  height: 100%;
+  background: white;
+  background: var(--dark-tone);
+  display: grid;
+  grid-template-rows: var(--header-height-sm);
+  grid-template-columns: 1fr 4fr 4fr 1fr;
+  grid-template-areas: ". logo menu .";
+}
+
+header .logo {
+  grid-area: logo;
+  font-weight: 900;
+  font-size: var(--text-sm);
+  color: white;
+  cursor: pointer;
+}
+
+header .menu {
+  grid-area: menu;
+}
+
+header .menu button {
+  width: 5rem;
+  font-weight: 300;
+  font-size: var(--text-tiny);
+  color: white;
+  transition: all 0.3s ease-out;
+}
+
+header .menu button:hover {
+  color: var(--text-shade);
+}
+
+@media only screen and (max-width: 400px) {
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  header {
+    grid-template-rows: var(--header-height-md);
+    grid-template-columns: 1.5fr 3.5fr 3.5fr 1.5fr;
+    grid-template-areas: ". logo menu .";
+  }
+
+  header .logo {
+    font-size: var(--text-md);
+  }
+
+  header .menu button {
+    font-size: var(--text-sm);
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  header {
+    grid-template-rows: var(--header-height-lg);
+    grid-template-columns: 2fr 3fr 3fr 2fr;
+    grid-template-areas: ". logo menu .";
+  }
+
+  header .logo {
+    font-size: var(--text-normal);
+  }
+
+  header .menu button {
+    width: 6rem;
+    font-size: var(--text-md);
+  }
+}

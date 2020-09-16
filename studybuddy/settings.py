@@ -6,6 +6,11 @@ load_dotenv(verbose=True)
 
 # env variables
 DJANGO_SECRET = os.getenv('DJANGO_SECRET')
+DB_NAME = os.getenv('DB_NAME')
+DB_USER = os.getenv('DB_USER')
+DB_PW = os.getenv('DB_PW')
+DB_HOST = os.getenv('DB_HOST')
+DB_PORT = os.getenv('DB_PORT')
 
 # django variables
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
@@ -68,11 +73,11 @@ WSGI_APPLICATION = 'studybuddy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'studybuddy',
-        'USER': 'peepee',
-        'PASSWORD': '',
-        'HOST': 'localhost',
-        'PORT': 5432,
+        'NAME': DB_NAME,
+        'USER': DB_USER,
+        'PASSWORD': DB_PW,
+        'HOST': DB_HOST,
+        'PORT': DB_PORT,
     }
 }
 

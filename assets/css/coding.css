@@ -1,0 +1,73 @@
+main .banner .image {
+  width: calc(var(--banner-height-sm) / 1.8);
+  height: var(--banner-height-sm);
+  background-image: url("../img/phillip_800x1440.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+}
+
+main .intro .macscreen {
+  background: var(--shade);
+  margin: 3rem var(--main-spacing);
+  color: var(--dark-tone);
+  font-family: var(--source-code);
+  font-size: 2.2rem;
+  font-weight: 200;
+  border-radius: var(--main-radius);
+  text-align: left;
+  box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+main .intro .macscreen .topbar {
+  width: 100%;
+  height: calc(var(--main-spacing) * 3);
+  background: #dedede;
+  border-radius: var(--main-radius) var(--main-radius) 0 0;
+  display: flex;
+  align-items: center;
+  padding: 0 var(--main-spacing);
+}
+
+/* fake mac screen */
+main .intro .macscreen .topbar span {
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+main .intro .macscreen .topbar span:nth-child(1) {
+  background: #ff7675;
+}
+
+main .intro .macscreen .topbar span:nth-child(2) {
+  background: #fdcb6e;
+}
+
+main .intro .macscreen .topbar span:nth-child(3) {
+  background: #00cec9;
+}
+
+main .intro .macscreen .body {
+  padding: 2.5rem var(--main-spacing);
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  main .banner .image {
+    width: calc(var(--banner-height-md) / 1.8);
+    height: var(--banner-height-md);
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  main .banner .image {
+    grid-area: banner-image;
+    width: calc(var(--banner-height-lg) / 1.8);
+    height: var(--banner-height-lg);
+    position: absolute;
+    bottom: 0rem;
+  }
+}

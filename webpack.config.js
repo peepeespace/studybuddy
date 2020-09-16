@@ -6,7 +6,10 @@ const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   entry: {
-    main: ["@babel/polyfill", "./assets/js/main.js"],
+    index: ["@babel/polyfill", "./assets/js/index.js"],
+    service: ["@babel/polyfill", "./assets/js/service.js"],
+    english: ["@babel/polyfill", "./assets/js/english.js"],
+    coding: ["@babel/polyfill", "./assets/js/coding.js"],
   },
   devServer: {
     contentBase: "./dist",
@@ -48,8 +51,28 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: "main.html",
-      template: "./templates/main.html",
+      filename: "index.html",
+      template: "./templates/index.html",
+      inject: false,
+    }),
+    new HtmlWebpackPlugin({
+      filename: "service.html",
+      template: "./templates/service.html",
+      inject: false,
+    }),
+    new HtmlWebpackPlugin({
+      filename: "english.html",
+      template: "./templates/english.html",
+      inject: false,
+    }),
+    new HtmlWebpackPlugin({
+      filename: "coding.html",
+      template: "./templates/coding.html",
+      inject: false,
+    }),
+    new HtmlWebpackPlugin({
+      filename: "lectures.html",
+      template: "./templates/lectures.html",
       inject: false,
     }),
     new MiniCssExtractPlugin({ filename: "[name].min.css" }),

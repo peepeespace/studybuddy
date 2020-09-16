@@ -1,0 +1,341 @@
+#index {
+  background: white;
+}
+
+/* Main */
+#index main {
+  height: 100%;
+  display: grid;
+  grid-template-rows: var(--banner-height-sm);
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-areas: ". banner .";
+  background-image: url("../img/study.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(0.3);
+}
+
+#index main .banner {
+  grid-area: banner;
+  align-self: center;
+  color: white;
+  text-shadow: 1px 1px 5px var(--dark);
+}
+
+#index main .banner h2 {
+  font-size: 2.5rem;
+}
+
+#index main .banner span {
+  font-size: 2.5rem;
+  background: linear-gradient(to top, var(--main-purple) 40%, transparent 40%);
+}
+
+#index main .banner .more-btn {
+  display: inline-block;
+  margin-top: 2rem;
+  font-size: var(--text-sm);
+  font-weight: 100;
+  padding: 1.5rem 2.5rem;
+  cursor: pointer;
+  background: white;
+  text-shadow: 0px 0px;
+  transition: all 0.3s ease;
+}
+
+#index main .banner .more-btn:hover {
+  background: #dfe6e9;
+}
+
+/* Aside */
+#index aside {
+  height: 100%;
+  display: grid;
+  grid-template-rows:
+    1rem
+    calc(var(--card-height) * 1.2 + var(--main-spacing))
+    calc(var(--card-height) * 1.2 + var(--main-spacing));
+  grid-template-columns: 0.5fr 9fr 0.5fr;
+  grid-template-areas:
+    "upperline upperline upperline"
+    ". anne ."
+    ". phillip ."
+    "intro intro intro"
+    "message message message";
+}
+
+#index aside .upperline {
+  grid-area: upperline;
+  background: var(--light-green);
+}
+
+#index aside .teacher {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: var(--main-spacing);
+  padding: var(--main-spacing);
+  border-radius: var(--main-radius);
+  box-shadow: 5px 5px 8px #f0f0f0, -2px -2px 6px #f0f0f0;
+  color: var(--dark-tone);
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+#index aside .teacher:hover {
+  box-shadow: 6px 6px 10px #f0f0f0, -4px -4px 6px #f0f0f0;
+}
+
+#index aside .anne {
+  grid-area: anne;
+}
+
+#index aside h5 {
+  font-family: var(--montserrat);
+}
+
+#index aside .teacher p {
+  color: var(--mid-dark);
+  font-weight: 100;
+}
+
+#index aside .anne h5 span {
+  color: var(--main-purple);
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+#index aside a {
+  transition: all 0.3s ease-out;
+  font-size: var(--text-tiny);
+}
+
+#index aside .anne a:hover {
+  color: var(--main-purple);
+}
+
+#index aside .phillip a:hover {
+  color: var(--light-green);
+}
+
+#index aside .anne .image {
+  width: calc(var(--card-height) * 1.2);
+  height: calc(var(--card-height) * 1.2);
+  background-image: url("../img/anne_full_720x720.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  filter: grayscale(0.4);
+}
+
+#index aside .phillip {
+  grid-area: phillip;
+}
+
+#index aside .phillip h5 span {
+  color: var(--light-green);
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+#index aside .phillip .image {
+  width: calc(var(--card-height) * 1.2);
+  height: calc(var(--card-height) * 1.2);
+  background-image: url("../img/phillip_720x720.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  filter: grayscale(0.4);
+}
+
+/* #index aside .video {
+} */
+
+/* Intro */
+#index aside .intro {
+  grid-area: intro;
+  margin: calc(var(--main-spacing) + 1rem) 0;
+}
+
+#index aside .intro .text {
+  height: var(--title-height);
+  background: rgb(9, 132, 227);
+  background: linear-gradient(
+    149deg,
+    rgba(9, 132, 227, 1) 0%,
+    rgba(28, 212, 207, 1) 65%
+  );
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#index aside .intro .text .side {
+  padding-left: 5%;
+}
+
+#index aside .intro .text h6 {
+  font-size: var(--text-normal);
+}
+
+#index aside .intro .text p {
+  color: #86f6ff;
+  font-weight: 400;
+  font-size: var(--text-md);
+}
+
+#index aside .intro .text i {
+  padding-right: 5%;
+  font-size: 3rem;
+}
+
+/* #index aside .intro .points {
+  background-image: url("../img/conference.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: grayscale(0.99);
+  z-index: -1;
+} */
+
+#index aside .intro .points {
+  padding-top: calc(var(--main-spacing) + 1rem);
+}
+
+#index aside .intro .points h6 {
+  font-size: var(--text-normal);
+}
+
+#index aside .intro .points p {
+  color: var(--dark);
+  font-size: var(--text-md);
+  font-weight: 100;
+}
+
+#index aside .intro .points .point {
+  padding: var(--main-spacing) 5%;
+}
+
+#index aside .points .point .line {
+  width: 0.5rem;
+  height: var(--text-normal);
+  background: var(--hot-pink);
+  display: inline-block;
+  margin-right: 0.5rem;
+}
+
+/* #index aside .faq {
+} */
+
+@media only screen and (max-width: 400px) {
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  #index main {
+    grid-template-rows: var(--banner-height-md);
+    grid-template-columns: 1.5fr 7fr 1.5fr;
+    grid-template-areas: ". banner .";
+  }
+
+  #index main .banner h2 {
+    font-size: 3.5rem;
+  }
+
+  #index main .banner span {
+    font-size: 3.5rem;
+  }
+
+  #index main .banner .more-btn {
+    font-size: var(--text-md);
+    padding: 2rem 4rem;
+  }
+
+  #index aside {
+    grid-template-rows:
+      1rem
+      calc(var(--card-height) * 1.4 + var(--main-spacing))
+      calc(var(--card-height) * 1.4 + var(--main-spacing));
+    grid-template-columns: 1.5fr 7fr 1.5fr;
+    grid-template-areas:
+      "upperline upperline upperline"
+      ". anne ."
+      ". phillip ."
+      ". intro ."
+      "message message message";
+  }
+
+  #index aside .anne .image {
+    width: calc(var(--card-height) * 1.4);
+    height: calc(var(--card-height) * 1.4);
+  }
+
+  #index aside .phillip .image {
+    width: calc(var(--card-height) * 1.4);
+    height: calc(var(--card-height) * 1.4);
+  }
+
+  #index aside .intro .text {
+    border-radius: var(--main-radius);
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  #index main {
+    grid-template-rows: var(--banner-height-lg);
+    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-areas: ". banner .";
+  }
+
+  #index main .banner .more-btn {
+    font-size: var(--text-normal);
+    padding: 2rem 5rem;
+  }
+
+  #index main .banner h2 {
+    font-size: 4.5rem;
+  }
+
+  #index main .banner span {
+    font-size: 4.5rem;
+    background: linear-gradient(
+      to top,
+      var(--main-purple) 40%,
+      transparent 40%
+    );
+  }
+
+  #index aside {
+    display: grid;
+    grid-template-rows:
+      1rem
+      calc(var(--card-height) * 1.6 + var(--main-spacing));
+    grid-template-columns: 2fr 3fr 2.5rem 3fr 2fr;
+    grid-template-areas:
+      "upperline upperline upperline upperline upperline"
+      ". anne . phillip ."
+      ". intro intro intro ."
+      "message message message message message";
+  }
+
+  #index aside h5 {
+    font-size: 3.5rem;
+  }
+
+  #index aside .anne .image {
+    width: calc(var(--card-height) * 1.6);
+    height: calc(var(--card-height) * 1.6);
+  }
+
+  #index aside .phillip .image {
+    width: calc(var(--card-height) * 1.6);
+    height: calc(var(--card-height) * 1.6);
+  }
+
+  #index aside .intro .text {
+    border-radius: var(--main-radius);
+  }
+}

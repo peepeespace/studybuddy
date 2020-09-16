@@ -1,0 +1,27 @@
+main .banner .image {
+  width: calc(var(--banner-height-sm) / 2);
+  height: var(--banner-height-sm);
+  background-image: url("../img/anne_1_720x1440.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  main .banner .image {
+    width: calc(var(--banner-height-md) / 2);
+    height: var(--banner-height-md);
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  main .banner .image {
+    grid-area: banner-image;
+    width: calc(var(--banner-height-lg) / 2);
+    height: var(--banner-height-lg);
+    position: absolute;
+    bottom: 0rem;
+  }
+}

@@ -41,3 +41,34 @@ class Lecture(models.Model):
     images = models.CharField(max_length=300, blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+
+class Message(models.Model):
+    name = models.CharField(max_length=255, blank=True, null=True)
+    phone = models.CharField(max_length=100, blank=True, null=True)
+    email = models.CharField(max_length=255, blank=True, null=True)
+    category = models.CharField(max_length=50, blank=True, null=True)
+    content = models.TextField(blank=True, null=True)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'{self.created}: {self.name}, {self.email}'
+
+
+class Class(models.Model):
+    name = models.CharField(max_length=255, blank=True, null=True)
+    subtitle = models.CharField(max_length=255, blank=True, null=True)
+    category = models.CharField(max_length=100, blank=True, null=True)
+    class_num = models.CharField(max_length=50, blank=True, null=True)
+    target = models.CharField(max_length=255, blank=True, null=True)
+    schedule = models.CharField(max_length=255, blank=True, null=True)
+    student_count = models.IntegerField(blank=True, null=True) # 수강생 수
+    class_count = models.IntegerField(blank=True, null=True) # 기수
+    pricing = models.CharField(max_length=255, blank=True, null=True)
+    description = models.TextField(blank=True, null=True)
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return f'[{self.category}] {self.name}'
