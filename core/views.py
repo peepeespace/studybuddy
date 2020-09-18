@@ -9,12 +9,17 @@ from rest_framework.views import APIView
 
 from core.models import User, Message, Class
 from core.serializers import UserSerializer, MessageSerializer, ClassSerializer
+
+from dotenv import load_dotenv
+
+load_dotenv(verbose=True)
+
+SLACK_TOKEN = os.getenv('SLACK_TOKEN')
 # How to access user after defining own user model:
 # https://stackoverflow.com/questions/17873855/manager-isnt-available-user-has-been-swapped-for-pet-person
 
 # https://medium.com/@apogiatzis/create-a-restful-api-with-users-and-jwt-authentication-using-django-1-11-drf-part-2-eb6fdcf71f45
 
-slack_token = 'xoxb-1354618717317-1350988782198-JG9JaS5xOKW2ljs0F1mvN1AX'
 
 class UserViewList(generics.ListCreateAPIView):
     queryset = User.objects.all()
@@ -51,8 +56,8 @@ class MessageView(APIView):
         phone = request.data.get('phone')
         email = request.data.get('email')
         content = request.data.get('content')
-
-        slack = Slacker(slack_token)
+        
+        slack = Slacker(SLACK_TOKEN)
         slack.chat.post_message(
             '#general',
             f'👋 MESSAGE -- 이름: {name}, 핸드폰: {phone}, 이메일: {email}, 메세지: {content}'

@@ -10,6 +10,7 @@ module.exports = {
     service: ["@babel/polyfill", "./assets/js/service.js"],
     english: ["@babel/polyfill", "./assets/js/english.js"],
     coding: ["@babel/polyfill", "./assets/js/coding.js"],
+    lectures: ["@babel/polyfill", "./assets/js/lectures.js"],
   },
   devServer: {
     contentBase: "./dist",

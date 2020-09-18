@@ -6,6 +6,7 @@ load_dotenv(verbose=True)
 
 # env variables
 DJANGO_SECRET = os.getenv('DJANGO_SECRET')
+DJANGO_HOST = os.getenv('DJANGO_HOST')
 DB_NAME = os.getenv('DB_NAME')
 DB_USER = os.getenv('DB_USER')
 DB_PW = os.getenv('DB_PW')
@@ -19,7 +20,13 @@ SECRET_KEY = DJANGO_SECRET
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', '127.0.0.0', 'localhost']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    '127.0.0.0',
+    'localhost',
+    'api.studybuddy.kr',
+    DJANGO_HOST
+]
 
 CORS_ORIGIN_ALLOW_ALL = True
 
