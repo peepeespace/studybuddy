@@ -1,3 +1,4 @@
+import os
 from slacker import Slacker
 
 from django.contrib.auth import authenticate
