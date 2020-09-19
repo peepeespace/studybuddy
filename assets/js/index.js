@@ -12,7 +12,7 @@ logo.addEventListener("click", (e) => {
   window.location = "/";
 });
 
-const messageAPI = "http://127.0.0.1:8888/core/message/";
+const messageAPI = "https://api.studybuddy.kr/core/message";
 
 const messageForm = document.getElementById("message-form");
 const nameInput = document.getElementById("name-input");

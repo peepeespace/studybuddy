@@ -36,3 +36,27 @@ for (var card of lectureCards) {
     modal.style.display = "block";
   });
 }
+
+const messageAPI = "https://api.studybuddy.kr/core/message";
+
+const messageForm = document.getElementById("message-form");
+const nameInput = document.getElementById("name-input");
+const phoneInput = document.getElementById("phone-input");
+const emailInput = document.getElementById("email-input");
+const contentInput = document.getElementById("content-input");
+
+messageForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const name = nameInput.value;
+  const phone = phoneInput.value;
+  const email = emailInput.value;
+  const content = contentInput.value;
+
+  await axios.post(messageAPI, {
+    name,
+    phone,
+    email,
+    content,
+  });
+});
