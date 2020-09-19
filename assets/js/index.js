@@ -12,7 +12,7 @@ logo.addEventListener("click", (e) => {
   window.location = "/";
 });
 
-const messageAPI = "https://api.studybuddy.kr/core/message";
+const messageAPI = "https://api.studybuddy.kr/core/message/";
 
 const messageForm = document.getElementById("message-form");
 const nameInput = document.getElementById("name-input");
