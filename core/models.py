@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.contrib.postgres.fields import ArrayField
 from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 
@@ -58,6 +59,7 @@ class Message(models.Model):
 
 class Class(models.Model):
     name = models.CharField(max_length=255, blank=True, null=True)
+    importance = models.IntegerField(blank=True, null=True)
     subtitle = models.CharField(max_length=255, blank=True, null=True)
     category = models.CharField(max_length=100, blank=True, null=True)
     class_num = models.CharField(max_length=50, blank=True, null=True)
@@ -67,6 +69,7 @@ class Class(models.Model):
     class_count = models.IntegerField(blank=True, null=True) # 기수
     pricing = models.CharField(max_length=255, blank=True, null=True)
     description = models.TextField(blank=True, null=True)
+    tags = ArrayField(models.CharField(max_length=200), blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 
