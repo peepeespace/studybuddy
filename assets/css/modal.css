@@ -113,7 +113,8 @@
   margin: 1rem 0;
 }
 
-.class-modal .form-row input[type="text"] {
+.class-modal .form-row #quick-name-input,
+.class-modal .form-row #quick-phone-input {
   width: 100%;
   height: 3rem;
   font-size: var(--text-md);
@@ -124,12 +125,13 @@
   border-bottom: 1px solid var(--text-shade);
 }
 
-.class-modal .form-row input[type="text"]:focus,
-.class-modal .form-row textarea:focus {
+.class-modal .form-row #quick-name-input:focus,
+.class-modal .form-row #quick-phone-input:focus,
+.class-modal .form-row #quick-message-input:focus {
   outline: none;
 }
 
-.class-modal .form-row textarea {
+.class-modal .form-row #quick-message-input {
   padding: 0.5rem;
   margin: 1rem 0;
   width: 100%;

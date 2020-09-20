@@ -81,16 +81,29 @@
           </p>
           <form id="quick-message-form" action="">
             <div class="form-row">
-              <label for="">Name:</label>
-              <input type="text" />
+              <label for="quick-name-input">Name:</label>
+              <input
+                id="quick-name-input"
+                name="quick-name-input"
+                type="text"
+              />
             </div>
             <div class="form-row">
-              <label for="">Phone:</label>
-              <input type="text" />
+              <label for="quick-phone-input">Phone:</label>
+              <input
+                id="quick-phone-input"
+                name="quick-phone-input"
+                type="text"
+              />
             </div>
             <div class="form-row">
-              <label for="">Message:</label>
-              <textarea cols="30" rows="10"></textarea>
+              <label for="quick-message-input">Message:</label>
+              <textarea
+                id="quick-message-input"
+                for="quick-message-input"
+                cols="30"
+                rows="10"
+              ></textarea>
             </div>
             <input type="submit" value="전송" />
           </form>
