@@ -23,7 +23,7 @@ header .menu {
 
 header .menu button {
   width: 5rem;
-  font-weight: 300;
+  /* font-weight: 300; */
   font-size: var(--text-tiny);
   color: white;
   transition: all 0.3s ease-out;
