@@ -100,6 +100,23 @@ section.message input[type="submit"] {
   cursor: pointer;
 }
 
+/* Kakao Plus Section */
+.message .options p #kakao-icon {
+  width: var(--text-sm);
+  height: var(--text-sm);
+  margin-right: 1rem;
+}
+
+.message .options p #kakao-profile {
+  color: var(--shade);
+  font-size: var(--text-sm);
+  font-weight: 900;
+}
+
+.message .options p #kakao-profile:hover {
+  border-bottom: 1px solid var(--shade);
+}
+
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   section.message .container {
     padding: 6rem 15% 7rem 15%;
