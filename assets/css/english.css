@@ -9,6 +9,13 @@ main .banner .image {
   bottom: 0;
 }
 
+main .main-lecture .main-card {
+  background-image: url("../img/english.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   main .banner .image {
     width: calc(var(--banner-height-md) / 2);

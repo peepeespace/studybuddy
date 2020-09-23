@@ -71,8 +71,41 @@ main .banner .name {
 /* Main Lecture */
 main .main-lecture {
   grid-area: main;
-  display: flex;
   padding-top: var(--main-spacing);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main .main-lecture > .event-sec {
+  width: 90%;
+  padding: calc(var(--main-spacing) * 2) var(--main-spacing);
+  border: 1px solid var(--shade);
+  border-radius: var(--main-radius);
+  color: var(--dark-tone);
+}
+
+main .main-lecture > .event-sec span {
+  border-bottom: 1px solid var(--dark-tone);
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+main .main-lecture > .event-sec p:nth-child(2) {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+main .main-lecture > .event-sec a {
+  font-size: 2.5rem;
+  background: var(--dark-tone);
+  color: #e8da43;
+  padding: 0 1rem;
+  transition: all 0.3s ease-out;
+}
+
+main .main-lecture > .event-sec a:hover {
+  background: var(--dark-tone-shade);
 }
 
 main .main-lecture .wrapper {
@@ -90,10 +123,6 @@ main .main-lecture .main-card {
   color: var(--dark-tone);
   border: 1px solid var(--shade);
   border-radius: calc(var(--main-radius) + 0.2rem);
-  background-image: url("../img/english.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   box-shadow: 3px 3px 11px var(--shade), -3px -3px 11px var(--shade);
 }
 
@@ -111,15 +140,21 @@ main .main-lecture h6 {
   color: var(--main-purple);
 }
 
-main .main-lecture .event {
+main .main-lecture .filter .event {
   margin-top: 1rem;
+  font-size: 2.2rem;
   font-weight: 900;
 }
 
-main .main-lecture .event span {
+main .main-lecture .event span:nth-child(1) {
   padding: 0 0.5rem;
+  margin-right: 0.5rem;
   background: var(--main-purple);
   color: var(--shade);
+}
+
+main .main-lecture .event span:nth-child(2) {
+  border-bottom: 1px solid var(--dark-tone);
 }
 
 main .main-lecture button {
@@ -408,6 +443,10 @@ main .message input[type="submit"] {
     grid-template-columns: 4fr 6fr;
   }
 
+  main .main-lecture > .event-sec {
+    width: 70%;
+  }
+
   main .main-lecture .main-card {
     width: 70%;
   }
@@ -465,6 +504,10 @@ main .message input[type="submit"] {
     top: 20%;
     left: 45%;
     z-index: -1;
+  }
+
+  main .main-lecture > .event-sec {
+    width: 60%;
   }
 
   main .main-lecture .main-card {
