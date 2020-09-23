@@ -3,12 +3,14 @@ main {
   display: grid;
   grid-template-rows: var(--banner-height-sm);
   grid-template-columns: 0.5fr 9fr 0.5fr;
-  grid-template-areas:
+  grid-template:
     "banner banner banner"
+    "main main main"
     ". intro ."
     ". banner-2 ."
     ". lecture ."
-    "message message message";
+    "message message message"
+    / 0.5fr 9fr 0.5fr;
 }
 
 main p {
@@ -18,6 +20,7 @@ main p {
 /* Banner */
 main .banner {
   grid-area: banner;
+  height: var(--banner-height-sm);
   background: var(--shade);
   z-index: -2;
   overflow: hidden;
@@ -27,17 +30,6 @@ main .banner .container {
   width: 90%;
   position: relative;
 }
-
-/* main .banner .image {
-  width: calc(var(--banner-height-sm) / 2);
-  height: var(--banner-height-sm);
-  background-image: url("../img/anne_1_720x1440.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
-  bottom: 0;
-} */
 
 main .banner .text {
   background: rgba(26, 30, 38, 0.7);
@@ -74,6 +66,71 @@ main .banner .name {
   position: absolute;
   right: 0;
   top: 0.5rem;
+}
+
+/* Main Lecture */
+main .main-lecture {
+  grid-area: main;
+  display: flex;
+  padding-top: var(--main-spacing);
+}
+
+main .main-lecture .wrapper {
+  width: 100%;
+  height: 100%;
+  padding: var(--main-spacing) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .main-lecture .main-card {
+  width: 90%;
+  color: var(--dark-tone);
+  border: 1px solid var(--shade);
+  border-radius: calc(var(--main-radius) + 0.2rem);
+  background-image: url("../img/english.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: 3px 3px 11px var(--shade), -3px -3px 11px var(--shade);
+}
+
+main .main-lecture .main-card .filter {
+  padding: calc(var(--main-spacing) * 2);
+  border-radius: var(--main-radius);
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 30%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+}
+
+main .main-lecture h6 {
+  color: var(--main-purple);
+}
+
+main .main-lecture .event {
+  margin-top: 1rem;
+  font-weight: 900;
+}
+
+main .main-lecture .event span {
+  padding: 0 0.5rem;
+  background: var(--main-purple);
+  color: var(--shade);
+}
+
+main .main-lecture button {
+  margin-top: var(--main-spacing);
+  font-size: var(--text-md);
+  font-weight: 400;
+  transition: color 0.3s ease-out;
+}
+
+main .main-lecture button:hover {
+  color: var(--dark-tone-shade);
 }
 
 /* Intro */
@@ -335,10 +392,15 @@ main .message input[type="submit"] {
     grid-template-columns: 1.5fr 7fr 1.5fr;
     grid-template-areas:
       "banner banner banner"
+      "main main main"
       ". intro ."
       ". banner-2 ."
       ". lecture ."
       "message message message";
+  }
+
+  main .banner {
+    height: var(--banner-height-md);
   }
 
   main .banner .container {
@@ -346,10 +408,9 @@ main .message input[type="submit"] {
     grid-template-columns: 4fr 6fr;
   }
 
-  /* main .banner .image {
-    width: calc(var(--banner-height-md) / 2);
-    height: var(--banner-height-md);
-  } */
+  main .main-lecture .main-card {
+    width: 70%;
+  }
 
   main .message .container {
     padding: 6rem 15% 7rem 15%;
@@ -363,10 +424,15 @@ main .message input[type="submit"] {
     grid-template-columns: 2fr 6fr 2fr;
     grid-template-areas:
       "banner banner banner"
+      "main main main"
       ". intro ."
       ". banner-2 ."
       ". lecture ."
       "message message message";
+  }
+
+  main .banner {
+    height: var(--banner-height-lg);
   }
 
   main .banner .container {
@@ -390,14 +456,6 @@ main .message input[type="submit"] {
     font-size: 6rem;
   }
 
-  /* main .banner .image {
-    grid-area: banner-image;
-    width: calc(var(--banner-height-lg) / 2);
-    height: var(--banner-height-lg);
-    position: absolute;
-    bottom: 0rem;
-  } */
-
   main .banner .circle {
     width: 55rem;
     height: 55rem;
@@ -407,6 +465,10 @@ main .message input[type="submit"] {
     top: 20%;
     left: 45%;
     z-index: -1;
+  }
+
+  main .main-lecture .main-card {
+    width: 60%;
   }
 
   main .message .container {
