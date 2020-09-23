@@ -79,7 +79,7 @@ main .main-lecture {
 
 main .main-lecture > .event-sec {
   width: 90%;
-  padding: calc(var(--main-spacing) * 2) var(--main-spacing);
+  padding: calc(var(--main-spacing) * 2);
   border: 1px solid var(--shade);
   border-radius: var(--main-radius);
   color: var(--dark-tone);
