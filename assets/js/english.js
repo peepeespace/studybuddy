@@ -1,5 +1,4 @@
 import "../css/style.css";
-import "../css/event.css";
 import "../css/modal.css";
 import "../css/header.css";
 import "../css/service.css";
