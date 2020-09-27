@@ -12,28 +12,48 @@ logo.addEventListener("click", (e) => {
   window.location = "/";
 });
 
-const modal = document.getElementsByClassName("class-modal")[0];
-const modalClose = document.getElementById("modal-close");
+// const modal = document.getElementsByClassName("class-modal")[0];
+// const modalClose = document.getElementById("modal-close");
 
-// btn.onclick = function() {
-//   modal.style.display = "block";
-// }
+// // btn.onclick = function() {
+// //   modal.style.display = "block";
+// // }
 
-modalClose.onclick = function () {
-  modal.style.display = "none";
-};
+// modalClose.onclick = function () {
+//   modal.style.display = "none";
+// };
 
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+// window.onclick = function (event) {
+//   if (event.target == modal) {
+//     modal.style.display = "none";
+//   }
+// };
+
+const openNotion = (url) => {
+  const win = window.open(url, "_blank");
+  win.focus();
 };
 
 const lectureCards = document.getElementsByClassName("lecture-card");
 
 for (var card of lectureCards) {
   card.addEventListener("click", (e) => {
-    modal.style.display = "block";
+    // modal.style.display = "block";
+    const id = card.getAttribute("id");
+
+    if (id == "coding1") {
+      openNotion("https://www.notion.so/1-1-b15fa1459ca6475a97db11624ea9677e");
+    } else if (id == "coding2") {
+      openNotion(
+        "https://www.notion.so/2-A-to-Z-46c129405c244b6b95a4d4f2809297e1"
+      );
+    } else if (id == "coding3") {
+      openNotion("https://www.notion.so/3-24-0e3d20b6a02349bb8eab0b5e31535707");
+    } else if (id == "coding4") {
+      openNotion("https://www.notion.so/4-4632b19ca73040a49962f921bfa5fa86");
+    } else if (id == "coding5") {
+      openNotion("https://www.notion.so/5-ec4d08e2469e4cf192bbbde5ec6892d9");
+    }
   });
 }
 
