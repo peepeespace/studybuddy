@@ -77,6 +77,10 @@ main .main-lecture {
   align-items: center;
 }
 
+main .main-lecture h5 {
+  font-size: 2.5rem;
+}
+
 main .main-lecture > .event-sec {
   width: 90%;
   padding: calc(var(--main-spacing) * 2);
@@ -88,16 +92,16 @@ main .main-lecture > .event-sec {
 main .main-lecture > .event-sec span {
   border-bottom: 1px solid var(--dark-tone);
   font-weight: 900;
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 main .main-lecture > .event-sec p:nth-child(2) {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 main .main-lecture > .event-sec a {
-  font-size: 2.5rem;
+  font-size: 2rem;
   background: var(--dark-tone);
   color: #e8da43;
   padding: 0 1rem;
@@ -443,6 +447,10 @@ main .message input[type="submit"] {
     grid-template-columns: 4fr 6fr;
   }
 
+  /* main .main-lecture h5 {
+    font-size: 2.7rem;
+  } */
+
   main .main-lecture > .event-sec {
     width: 70%;
   }
@@ -504,6 +512,22 @@ main .message input[type="submit"] {
     top: 20%;
     left: 45%;
     z-index: -1;
+  }
+
+  main .main-lecture > .event-sec span {
+    font-size: 3rem;
+  }
+
+  main .main-lecture > .event-sec p:nth-child(2) {
+    font-size: 2.5rem;
+  }
+
+  main .main-lecture > .event-sec a {
+    font-size: 2.5rem;
+  }
+
+  main .main-lecture h5 {
+    font-size: 3rem;
   }
 
   main .main-lecture > .event-sec {

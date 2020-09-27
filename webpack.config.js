@@ -11,6 +11,7 @@ module.exports = {
     english: ["@babel/polyfill", "./assets/js/english.js"],
     coding: ["@babel/polyfill", "./assets/js/coding.js"],
     lectures: ["@babel/polyfill", "./assets/js/lectures.js"],
+    main_lecture: ["@babel/polyfill", "./assets/js/main_lecture.js"],
   },
   devServer: {
     contentBase: "./dist",
@@ -74,6 +75,11 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "lectures.html",
       template: "./templates/lectures.html",
+      inject: false,
+    }),
+    new HtmlWebpackPlugin({
+      filename: "main_lecture.html",
+      template: "./templates/main_lecture.html",
       inject: false,
     }),
     new MiniCssExtractPlugin({ filename: "[name].min.css" }),

@@ -9,6 +9,21 @@ main .banner .image {
   bottom: 0;
 }
 
+main .main-lecture .main-card {
+  background-image: url("../img/coding.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .main-lecture .main-card .filter {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 30%,
+    rgba(255, 255, 255, 0.4) 100%
+  );
+}
+
 main .intro .macscreen {
   background: var(--shade);
   margin: 3rem var(--main-spacing);
