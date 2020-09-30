@@ -29,11 +29,29 @@ logo.addEventListener("click", (e) => {
 //   }
 // };
 
+const openNotion = (url) => {
+  const win = window.open(url, "_blank");
+  win.focus();
+};
+
 const lectureCards = document.getElementsByClassName("lecture-card");
 
 for (var card of lectureCards) {
   card.addEventListener("click", (e) => {
-    modal.style.display = "block";
+    // modal.style.display = "block";
+    const id = card.getAttribute("id");
+
+    if (id == "english1") {
+      openNotion("https://www.notion.so/ad8afcc410db4fa5bf6ebd370ef24807");
+    } else if (id == "english2") {
+      openNotion("https://www.notion.so/9475ffd63ef54a698975cbea788af25a");
+    } else if (id == "english3") {
+      openNotion("https://www.notion.so/41faf62fbac24d73986917735e8dcf45");
+    } else if (id == "english4") {
+      openNotion(
+        "https://www.notion.so/TOEIC-Speaking-fc851ee0c7eb4b69ae503f17e22ddb90"
+      );
+    }
   });
 }
 
