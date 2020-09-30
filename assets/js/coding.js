@@ -36,7 +36,7 @@ const openNotion = (url) => {
 
 const lectureCards = document.getElementsByClassName("lecture-card");
 
-for (var card of lectureCards) {
+for (let card of lectureCards) {
   card.addEventListener("click", (e) => {
     // modal.style.display = "block";
     const id = card.getAttribute("id");
