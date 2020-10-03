@@ -6,6 +6,8 @@ import "../css/message.css";
 import "../css/footer.css";
 import "../css/coding.css";
 
+import axios from "axios";
+
 const logo = document.getElementsByClassName("logo")[0];
 
 logo.addEventListener("click", (e) => {
