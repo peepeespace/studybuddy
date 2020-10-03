@@ -3,6 +3,49 @@
 }
 
 /* Main */
+.event-popup {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  color: black;
+  text-shadow: 0px 0px 0px var(--dark);
+}
+
+.event-popup .popup {
+  border: 2px solid var(--light-green);
+  background: var(--dark-tone);
+  color: white;
+  margin: 1rem 0;
+  padding: 1rem;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.event-popup .popup i {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.3rem;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.event-popup .popup i:hover {
+  color: var(--dark-tone-shade);
+}
+
+.event-popup .popup .title {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--light-green);
+}
+
+.event-popup .popup .summary {
+  font-size: 1.3rem;
+  color: var(--shade);
+}
+
 #index main {
   height: 100%;
   display: grid;
@@ -14,6 +57,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   filter: grayscale(0.3);
+  position: relative;
 }
 
 #index main .banner {
@@ -27,7 +71,7 @@
   font-size: 2.5rem;
 }
 
-#index main .banner span {
+#index main .banner h2 span {
   font-size: 2.5rem;
   background: linear-gradient(to top, var(--main-purple) 40%, transparent 40%);
 }
@@ -235,6 +279,12 @@
 }
 
 @media only screen and (min-width: 401px) and (max-width: 960px) {
+  .event-popup {
+    position: absolute;
+    top: 0;
+    right: 15%;
+  }
+
   #index main {
     grid-template-rows: var(--banner-height-md);
     grid-template-columns: 1.5fr 7fr 1.5fr;
@@ -245,7 +295,7 @@
     font-size: 3.5rem;
   }
 
-  #index main .banner span {
+  #index main .banner h2 span {
     font-size: 3.5rem;
   }
 
@@ -284,6 +334,12 @@
 }
 
 @media only screen and (min-width: 961px) {
+  .event-popup {
+    position: absolute;
+    top: 0;
+    right: 20%;
+  }
+
   #index main {
     grid-template-rows: var(--banner-height-lg);
     grid-template-columns: 2fr 6fr 2fr;
@@ -299,7 +355,7 @@
     font-size: 4.5rem;
   }
 
-  #index main .banner span {
+  #index main .banner h2 span {
     font-size: 4.5rem;
     background: linear-gradient(
       to top,
