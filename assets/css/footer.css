@@ -50,6 +50,63 @@ footer .blended button:focus {
   outline: none;
 }
 
+footer .blended .credit {
+  display: block;
+  font-size: var(--text-tiny);
+  border: none;
+  padding: 0;
+}
+
+/* The Modal (background) */
+footer .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+footer .modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 1rem 2rem 2rem 2rem;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+footer .modal-content .credit-link {
+  background: var(--shade);
+  color: var(--main-purple);
+  padding: 0 0.5rem;
+}
+
+/* The Close Button */
+footer .close-section {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer .close {
+  color: #aaa;
+  font-size: 2.5rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+footer .close:hover,
+footer .close:focus {
+  color: var(--dark-tone);
+  text-decoration: none;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 401px) and (max-width: 960px) {
   footer {
     grid-template-columns: 1.5fr 7fr 1.5fr;
@@ -60,6 +117,10 @@ footer .blended button:focus {
 
   footer .blended button {
     margin-bottom: 2rem;
+  }
+
+  footer .blended .credit {
+    margin-top: -1rem;
   }
 }
 
@@ -73,5 +134,9 @@ footer .blended button:focus {
   footer .company {
     margin: 1rem;
     padding: 5rem 0 10rem 0;
+  }
+
+  footer .blended .credit {
+    margin-top: 1rem;
   }
 }

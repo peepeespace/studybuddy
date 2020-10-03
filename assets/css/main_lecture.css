@@ -1,1 +1,287 @@
+video {
+  width: 100%;
+  height: auto;
+  outline: none;
+}
 
+/* Main Lecture */
+.main-lecture {
+  display: grid;
+  grid-template:
+    "banner banner banner"
+    "video video video"
+    ". description ."
+    ". curriculum ."
+    ". description-2 ."
+    ". related ."
+    / 0.5fr 9fr 0.5fr;
+}
+
+section.banner {
+  grid-area: banner;
+  background: var(--dark-tone);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section.banner .banner-container {
+  width: 90%;
+  padding: 3rem 0 5rem 0;
+}
+
+/* Banner Container */
+section.banner .tag {
+  margin-bottom: var(--main-spacing);
+}
+
+section.banner .tag span {
+  background: var(--light-green);
+  color: var(--dark-tone);
+  padding: 0.5rem 1rem;
+}
+
+section.banner .title {
+  color: white;
+  font-size: 3.5rem;
+}
+
+section.banner .subtitle {
+  color: var(--dark-tone-shade);
+  font-size: 2.5rem;
+}
+
+section.banner .price {
+  margin: var(--main-spacing) 0;
+  padding-bottom: 3rem;
+}
+
+section.banner .price > span {
+  color: white;
+  font-size: 2.5rem;
+}
+
+section.banner .price > span .prev-price {
+  font-size: 2.5rem;
+  text-decoration: line-through;
+  color: var(--main-pink);
+}
+
+section.banner .price > span .curr-price {
+  display: inline-block;
+  font-size: 2.5rem;
+  background: var(--shade);
+  border-radius: var(--main-radius);
+  padding: 0 0.5rem;
+  color: var(--dark-tone);
+}
+
+section.banner .classes {
+  margin-top: 3rem;
+}
+
+section.banner .class-card {
+  font-size: 2rem;
+  color: var(--dark-tone-shade);
+}
+
+section.banner .class-card .dday {
+  margin-bottom: 0.5rem;
+}
+
+section.banner .class-card .dday span {
+  background: var(--dark-tone-shade);
+  color: white;
+  padding: 0 1rem;
+}
+
+section.banner .class-card .name span {
+  color: white;
+  background: linear-gradient(to top, var(--main-purple) 30%, transparent 30%);
+}
+
+section.banner .class-card .student {
+  margin-bottom: 1rem;
+}
+
+section.banner .class-card a {
+  color: var(--shade);
+  font-weight: 100;
+  border: 1px solid var(--shade);
+  box-shadow: 3px 3px var(--shade);
+  padding: 0 1rem;
+}
+
+section.banner .class-card:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+section.video {
+  grid-area: video;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+section.description {
+  grid-area: description;
+  padding: 2rem 0 3.5rem 0;
+}
+
+section.description .summary {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+section.description .target,
+section.description .objective,
+section.description .method,
+section.description .material {
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+section.description span {
+  font-weight: 900;
+}
+
+section.curriculum {
+  grid-area: curriculum;
+}
+
+section.curriculum .curriculum-1,
+section.curriculum .curriculum-2 {
+  margin-bottom: 3.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--main-radius);
+  box-shadow: 2px 2px 10px var(--shade), -2px -2px 10px var(--shade);
+  padding: var(--main-spacing);
+}
+
+section.curriculum .title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  color: var(--main-blue);
+}
+
+section.curriculum p {
+  font-size: 2rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+}
+
+section.related {
+  grid-area: related;
+}
+
+section.related .related-label span {
+  font-size: 2.5rem;
+  font-weight: 900;
+  background: linear-gradient(to top, var(--light-green) 30%, transparent 30%);
+}
+
+section.related .related-card {
+  padding: var(--main-spacing) 0;
+}
+
+section.related .related-card:not(:last-child) {
+  border-bottom: 1px solid var(--border);
+}
+
+section.related .related-card:last-child {
+  padding-bottom: 3.5rem;
+}
+
+section.related .related-card .name {
+  font-size: 2rem;
+  font-weight: 100;
+  margin-bottom: 1rem;
+}
+
+section.related .related-card a {
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+section.related .related-card a:hover {
+  color: var(--text-shade);
+}
+
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  .main-lecture {
+    display: grid;
+    grid-template:
+      "banner banner banner"
+      "video video video"
+      ". description ."
+      ". curriculum ."
+      ". related ."
+      / 1.5fr 7fr 1.5fr;
+  }
+
+  section.banner .banner-container {
+    width: 70%;
+  }
+
+  section.banner .title {
+    font-size: 4.5rem;
+  }
+
+  section.banner .subtitle {
+    font-size: 3rem;
+  }
+
+  section.banner .price > span .curr-price {
+    display: inline;
+  }
+
+  section.video {
+    margin: 0;
+  }
+}
+
+@media only screen and (min-width: 961px) {
+  .main-lecture {
+    display: grid;
+    grid-template:
+      "banner banner banner"
+      ". video ."
+      ". description ."
+      ". curriculum ."
+      ". related ."
+      / 2fr 6fr 2fr;
+  }
+
+  section.banner .banner-container {
+    width: 60%;
+  }
+
+  section.banner .title {
+    font-size: 4.5rem;
+  }
+
+  section.banner .subtitle {
+    font-size: 3rem;
+  }
+
+  section.banner .price > span .curr-price {
+    display: inline;
+  }
+
+  section.video {
+    margin: 4rem 0;
+  }
+
+  section.video .play-div {
+    width: 70%;
+  }
+
+  section.description {
+    padding: 0 0 3.5rem 0;
+  }
+}
