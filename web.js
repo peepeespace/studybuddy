@@ -30,3 +30,11 @@ app.get("/english", (req, res) => {
 app.get("/coding", (req, res) => {
   res.render("coding.html");
 });
+
+app.get("/main-english", (req, res) => {
+  res.render("main_english.html");
+});
+
+app.get("/main-coding", (req, res) => {
+  res.render("main_coding.html");
+});
