@@ -3,6 +3,12 @@ import "../css/header.css";
 import "../css/main_lecture.css";
 import "../css/footer.css";
 
+const logo = document.getElementsByClassName("logo")[0];
+
+logo.addEventListener("click", (e) => {
+  window.location = "/";
+});
+
 let modal = document.getElementById("credit-modal");
 
 let btn = document.getElementById("credit-modal-btn");
