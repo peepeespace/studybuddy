@@ -77,4 +77,6 @@ messageForm.addEventListener("submit", async (e) => {
     email,
     content,
   });
+
+  location.reload();
 });
