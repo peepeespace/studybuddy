@@ -11,6 +11,7 @@ body {
 
 /* Main Lecture */
 .main-lecture {
+  width: 100%;
   display: grid;
   grid-template:
     "banner banner banner"
