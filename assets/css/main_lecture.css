@@ -18,6 +18,7 @@ video {
 }
 
 section.banner {
+  width: 100%;
   grid-area: banner;
   background: var(--dark-tone);
   display: flex;
