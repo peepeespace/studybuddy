@@ -50,11 +50,7 @@ for (let card of lectureCards) {
         "https://www.notion.so/2-A-to-Z-46c129405c244b6b95a4d4f2809297e1"
       );
     } else if (id == "coding3") {
-      openNotion("https://www.notion.so/3-24-0e3d20b6a02349bb8eab0b5e31535707");
-    } else if (id == "coding4") {
-      openNotion("https://www.notion.so/4-4632b19ca73040a49962f921bfa5fa86");
-    } else if (id == "coding5") {
-      openNotion("https://www.notion.so/5-ec4d08e2469e4cf192bbbde5ec6892d9");
+      openNotion("https://www.notion.so/3-3e65d04289d240bfbe658016e03334c1");
     }
   });
 }
