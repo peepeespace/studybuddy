@@ -108,15 +108,17 @@ section.banner .class-card .name span {
 }
 
 section.banner .class-card .student {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 
 section.banner .class-card a {
-  color: var(--shade);
-  font-weight: 100;
-  border: 1px solid var(--shade);
-  box-shadow: 3px 3px var(--shade);
-  padding: 0 1rem;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--dark-tone);
+  background: var(--shade);
+  border: 2px solid var(--shade);
+  box-shadow: 4px 4px var(--light-green);
+  padding: 1rem 3rem;
 }
 
 section.banner .class-card:not(:last-child) {
