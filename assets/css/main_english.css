@@ -1,0 +1,8 @@
+section.teacher .image {
+  width: 20rem;
+  height: 20rem;
+  background-image: url("../img/anne_full_720x720.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

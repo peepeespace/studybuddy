@@ -16,6 +16,7 @@ body {
   grid-template:
     "banner banner banner"
     "video video video"
+    ". teacher ."
     ". description ."
     ". curriculum ."
     ". description-2 ."
@@ -134,6 +135,81 @@ section.video {
   margin: 0;
 }
 
+section.teacher {
+  margin-top: 2rem;
+  grid-area: teacher;
+}
+
+section.teacher .intro {
+  font-family: var(--nanum-pen);
+  font-size: 3rem;
+  font-weight: 900;
+}
+
+section.teacher .intro span {
+  font-size: 3rem;
+  color: var(--main-purple);
+}
+
+section.teacher .sub-intro {
+  font-size: 2rem;
+}
+
+section.teacher .sub-intro a {
+  background: var(--shade);
+  color: var(--light-purple);
+}
+
+section.teacher .profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* section.teacher .image {
+  width: 20rem;
+  height: 20rem;
+  background-image: url("../img/phillip_720x720.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+section.teacher .quote {
+  background: var(--shade);
+  padding: var(--main-spacing);
+  font-size: 2.5rem;
+  font-weight: 900;
+  border-radius: var(--main-radius);
+  box-shadow: 4px 4px var(--main-purple);
+  color: var(--dark-tone);
+}
+
+section.teacher .quote .pink {
+  font-size: 3rem;
+  color: var(--hot-pink);
+}
+
+section.teacher .history-list {
+  margin: 3.5rem 0 3rem 0;
+  width: 100%;
+}
+
+section.teacher .history-list .history {
+  width: 100%;
+  padding: var(--main-spacing) 0;
+  border-bottom: 1px solid var(--shade);
+  font-size: 2rem;
+}
+
+section.teacher .history-list .history span {
+  background: var(--shade);
+  padding: 0 1rem;
+  border-radius: var(--main-radius);
+}
+
 section.description {
   grid-area: description;
   padding: 2rem 0 3.5rem 0;
@@ -178,10 +254,29 @@ section.curriculum .title {
   color: var(--main-blue);
 }
 
+section.curriculum .intro {
+  font-size: 1.8rem;
+  margin: 2rem 0;
+}
+
 section.curriculum p {
   font-size: 2rem;
   font-weight: 400;
   margin: 0.5rem 0;
+}
+
+section.curriculum .more-sec {
+  padding: 2rem 0;
+}
+
+section.curriculum a {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: var(--dark-tone);
+  background: var(--shade);
+  border: 2px solid var(--shade);
+  box-shadow: 4px 4px var(--light-green);
+  padding: 1rem 4rem;
 }
 
 section.related {
@@ -227,6 +322,7 @@ section.related .related-card a:hover {
     grid-template:
       "banner banner banner"
       "video video video"
+      ". teacher ."
       ". description ."
       ". curriculum ."
       ". related ."
@@ -252,6 +348,19 @@ section.related .related-card a:hover {
   section.video {
     margin: 0;
   }
+
+  section.teacher .intro {
+    font-size: 3.5rem;
+  }
+
+  section.teacher .intro span {
+    font-size: 3.5rem;
+  }
+
+  section.teacher .image {
+    width: 25rem;
+    height: 25rem;
+  }
 }
 
 @media only screen and (min-width: 961px) {
@@ -260,6 +369,7 @@ section.related .related-card a:hover {
     grid-template:
       "banner banner banner"
       ". video ."
+      ". teacher ."
       ". description ."
       ". curriculum ."
       ". related ."
@@ -290,7 +400,24 @@ section.related .related-card a:hover {
     width: 70%;
   }
 
+  section.teacher {
+    margin-top: 0;
+  }
+
+  section.teacher .intro {
+    font-size: 4rem;
+  }
+
+  section.teacher .intro span {
+    font-size: 4rem;
+  }
+
+  section.teacher .image {
+    width: 25rem;
+    height: 25rem;
+  }
+
   section.description {
-    padding: 0 0 3.5rem 0;
+    padding: 2rem 0 3.5rem 0;
   }
 }

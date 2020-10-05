@@ -12,8 +12,8 @@ module.exports = {
     coding: ["@babel/polyfill", "./assets/js/coding.js"],
     lectures: ["@babel/polyfill", "./assets/js/lectures.js"],
     main_lecture: ["@babel/polyfill", "./assets/js/main_lecture.js"],
-    main_english: ["@babel/polyfill", "./assets/js/main_lecture.js"],
-    main_coding: ["@babel/polyfill", "./assets/js/main_lecture.js"],
+    main_english: ["@babel/polyfill", "./assets/js/main_english.js"],
+    main_coding: ["@babel/polyfill", "./assets/js/main_coding.js"],
   },
   devServer: {
     contentBase: "./dist",
